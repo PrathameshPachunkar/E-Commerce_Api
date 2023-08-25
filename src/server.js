@@ -9,6 +9,11 @@ const UserRoutes = require("./Routes/user_routes")
 const CategoryRoutes = require("./Routes/category_routes")
 const ProductRoutes = require("./Routes/product_routes")
 const CartRoutes = require("./Routes/cart_routes")
+const OrderRoutes = require("./Routes/order_routes")
+
+
+
+
 mongoose.connect("mongodb://localhost:27017")
 
 app.use(bodyparser.json());
@@ -20,6 +25,7 @@ app.use("/api/user",UserRoutes)
 app.use('/api/category',CategoryRoutes)
 app.use('/api/products',ProductRoutes)
 app.use('/api/cart',CartRoutes)
+app.use('/api/order',OrderRoutes)
 
 
 
